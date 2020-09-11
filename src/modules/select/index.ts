@@ -14,7 +14,9 @@ const defaultWalletNames = [
   'operaTouch',
   'status',
   'hyperpay',
-  'unilogin'
+  'unilogin',
+  'huobiwallet',
+  'cyanowallet'
 ]
 
 function select(
@@ -97,6 +99,8 @@ function getModule(name: string): Promise<any> | undefined {
       return import('./wallets/mykey')
     case 'huobiwallet':
       return import('./wallets/huobiwallet')
+    case 'cyanowallet':
+      return import('./wallets/cyanowallet')
     case 'hyperpay':
       return import('./wallets/hyperpay')
     default:
